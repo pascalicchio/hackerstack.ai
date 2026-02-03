@@ -1,60 +1,17 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { categories, tools, totalTools } from './tools/data'
 
 export const metadata: Metadata = {
-  title: 'HackerStack.ai - Best AI Tools for Indie Hackers',
+  title: 'HackerStack.dev - Best AI Tools for Indie Hackers',
   description: 'Discover the best AI tools for building, growing, and scaling your indie hacker business. Curated reviews, comparisons, and guides.',
   keywords: 'AI tools, indie hacker, SaaS tools, AI software, developer tools, AI directory',
   openGraph: {
-    title: 'HackerStack.ai - Best AI Tools for Indie Hackers',
+    title: 'HackerStack.dev - Best AI Tools for Indie Hackers',
     description: 'Discover the best AI tools for building, growing, and scaling your indie hacker business.',
     type: 'website',
   },
 }
-
-const categories = [
-  { name: 'Code & Development', count: 12, icon: '💻', slug: 'code-development' },
-  { name: 'Design & Creative', count: 8, icon: '🎨', slug: 'design-creative' },
-  { name: 'Writing & Content', count: 10, icon: '✍️', slug: 'writing-content' },
-  { name: 'Marketing & Growth', count: 9, icon: '📈', slug: 'marketing-growth' },
-  { name: 'Productivity', count: 7, icon: '⚡', slug: 'productivity' },
-  { name: 'Data & Analytics', count: 4, icon: '📊', slug: 'data-analytics' },
-]
-
-const featuredTools = [
-  {
-    name: 'Claude',
-    description: 'Anthropic\'s AI assistant excels at coding, analysis, and creative work with a focus on helpfulness and safety.',
-    pricing: 'Free / Pro $20/mo',
-    category: 'Code & Development',
-    affiliate: false,
-    url: 'https://claude.ai',
-  },
-  {
-    name: 'Cursor',
-    description: 'AI-first code editor built on VS Code. Features intelligent autocomplete and AI-powered refactoring.',
-    pricing: 'Free / Pro $20/mo',
-    category: 'Code & Development',
-    affiliate: false,
-    url: 'https://cursor.sh',
-  },
-  {
-    name: 'Midjourney',
-    description: 'AI image generation tool known for high-quality, artistic outputs. Best for creative projects.',
-    pricing: '$10/mo',
-    category: 'Design & Creative',
-    affiliate: false,
-    url: 'https://midjourney.com',
-  },
-  {
-    name: 'ChatGPT',
-    description: 'OpenAI\'s conversational AI assistant. Versatile for writing, coding, analysis, and brainstorming.',
-    pricing: 'Free / Plus $20/mo',
-    category: 'Writing & Content',
-    affiliate: true,
-    url: 'https://chatgpt.com',
-  },
-]
 
 const recentPosts = [
   {
@@ -81,6 +38,7 @@ const recentPosts = [
 ]
 
 export default function Home() {
+  const featuredTools = tools.slice(0, 4)
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#fafafa]">
       {/* Navigation */}
@@ -124,7 +82,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#8B5CF6]/10 text-[#8B5CF6] text-sm font-medium mb-6">
             <span className="mr-2">🚀</span>
-            50+ Curated AI Tools for Indie Hackers
+            {totalTools}+ Curated AI Tools for Indie Hackers
           </div>
           <h1 className="text-5xl sm:text-7xl font-bold tracking-tight mb-6">
             Build Faster with<br />
@@ -156,20 +114,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-[#8B5CF6]">50+</div>
+              <div className="text-4xl font-bold text-[#8B5CF6]">{totalTools}+</div>
               <div className="text-[#a1a1a1] mt-1">AI Tools</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-[#8B5CF6]">6</div>
+              <div className="text-4xl font-bold text-[#8B5CF6]">{categories.length}</div>
               <div className="text-[#a1a1a1] mt-1">Categories</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-[#8B5CF6]">25+</div>
+              <div className="text-4xl font-bold text-[#8B5CF6]">10+</div>
               <div className="text-[#a1a1a1] mt-1">Reviews</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-[#8B5CF6]">10K+</div>
-              <div className="text-[#a1a1a1] mt-1">Monthly Readers</div>
+              <div className="text-4xl font-bold text-[#8B5CF6]">2</div>
+              <div className="text-[#a1a1a1] mt-1">Blog Posts</div>
             </div>
           </div>
         </div>
@@ -216,9 +174,10 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            {featuredTools.map((tool, index) => (
-              <div
-                key={index}
+            {featuredTools.map((tool) => (
+              <Link
+                key={tool.id}
+                href={`/tools/${tool.id}`}
                 className="p-6 bg-[#0a0a0a] border border-[#222] rounded-xl hover:border-[#8B5CF6] transition-all"
               >
                 <div className="flex justify-between items-start mb-4">
@@ -237,16 +196,11 @@ export default function Home() {
                 <p className="text-[#a1a1a1] mb-4">{tool.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-[#666]">{tool.pricing}</span>
-                  <Link
-                    href={tool.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 bg-[#222] text-[#fafafa] font-semibold rounded-lg hover:bg-[#333] transition-colors"
-                  >
-                    Visit →
-                  </Link>
+                  <span className="px-4 py-2 bg-[#222] text-[#fafafa] font-semibold rounded-lg hover:bg-[#333] transition-colors">
+                    View →
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
