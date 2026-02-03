@@ -6,3 +6,11 @@
   "title": "Forbidden",
   "status": 403
 }
+[2026-02-03 07:30:01] 💡 Posting quick tip...
+❌ Failed: Request failed with code 403
+{
+  "detail": "You are not allowed to create a Tweet with duplicate content.",
+  "type": "about:blank",
+  "title": "Forbidden",
+  "status": 403
+}

@@ -68,7 +68,7 @@ export default function Blog() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link href="/" className="text-2xl font-bold tracking-tight">
-                Hacker<span className="text-[#8B5CF6]">Stack</span>.ai
+                Hacker<span className="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">Stack</span>.dev
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">

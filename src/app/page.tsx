@@ -275,7 +275,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="text-xl font-bold mb-4">
-                Hacker<span className="text-[#8B5CF6]">Stack</span>.ai
+                Hacker<span className="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">Stack</span>.dev
               </h3>
               <p className="text-[#a1a1a1] text-sm">
                 Curated AI tools for indie hackers, solo founders, and bootstrappers.
@@ -309,7 +309,7 @@ export default function Home() {
             </div>
           </div>
           <div className="pt-8 border-t border-[#222] text-center text-sm text-[#666]">
-            © 2026 HackerStack.ai. All rights reserved.
+            © 2026 HackerStack.dev. All rights reserved.
           </div>
         </div>
       </footer>
