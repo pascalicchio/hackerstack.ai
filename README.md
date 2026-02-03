@@ -2,7 +2,7 @@
 
 **Best AI Tools for Indie Hackers** - A curated directory of AI tools with reviews, comparisons, and guides.
 
-🌐 **Live Site:** https://hackerstack.ai (after deployment)
+🌐 **Live Site:** https://hackerstack.dev
 
 ## 🚀 Quick Start
 
@@ -88,13 +88,13 @@ hackerstack/
 3. Deploy automatically
 
 ### Custom Domain
-1. Purchase `hackerstack.ai` from registrar
+1. Purchase `hackerstack.dev` from registrar
 2. Add domain in Vercel dashboard
 3. Update DNS records
 
 ## 📝 Todo
 
-- [ ] Register domain hackerstack.ai
+- [ ] Register domain hackerstack.dev
 - [ ] Deploy to Vercel production
 - [ ] Set up custom domain
 - [ ] Create 5 blog posts

@@ -14,22 +14,22 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'HackerStack.ai - Best AI Tools for Indie Hackers',
-    template: '%s | HackerStack.ai',
+    default: 'HackerStack.dev - Best AI Tools for Indie Hackers',
+    template: '%s | HackerStack.dev',
   },
   description: 'Discover the best AI tools for building, growing, and scaling your indie hacker business. Curated reviews, comparisons, and guides.',
   keywords: ['AI tools', 'indie hacker', 'SaaS tools', 'AI software', 'developer tools', 'AI directory'],
   authors: [{ name: 'HackerStack' }],
   openGraph: {
-    title: 'HackerStack.ai - Best AI Tools for Indie Hackers',
+    title: 'HackerStack.dev - Best AI Tools for Indie Hackers',
     description: 'Discover the best AI tools for building, growing, and scaling your indie hacker business.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'HackerStack.ai',
+    siteName: 'HackerStack.dev',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'HackerStack.ai - Best AI Tools for Indie Hackers',
+    title: 'HackerStack.dev - Best AI Tools for Indie Hackers',
     description: 'Discover the best AI tools for building, growing, and scaling your indie hacker business.',
   },
   robots: {
