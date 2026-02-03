@@ -21,7 +21,7 @@ export default function BlogPost() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="text-xl font-bold">
-              Hacker<span className="text-[#ff6b35]">Stack</span>.dev
+              Hacker<span className="text-[#8B5CF6]">Stack</span>.dev
             </Link>
             <Link href="/blog" className="text-[#a1a1a1] hover:text-[#fafafa]">
               ← Back to Blog
@@ -35,7 +35,7 @@ export default function BlogPost() {
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-2 mb-4">
-            <span className="text-xs px-2 py-1 bg-[#ff6b35]/20 text-[#ff6b35] rounded-full">
+            <span className="text-xs px-2 py-1 bg-[#8B5CF6]/20 text-[#8B5CF6] rounded-full">
               Tool Reviews
             </span>
             <span className="text-xs text-[#666]">January 25, 2026</span>
@@ -70,7 +70,7 @@ export default function BlogPost() {
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h3 className="text-xl font-bold">1. Claude (Anthropic)</h3>
-                  <span className="text-sm text-[#ff6b35]">Coding & Writing</span>
+                  <span className="text-sm text-[#8B5CF6]">Coding & Writing</span>
                 </div>
                 <span className="text-sm text-[#a1a1a1]">Free / Pro $20/mo</span>
               </div>
@@ -91,7 +91,7 @@ export default function BlogPost() {
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h3 className="text-xl font-bold">2. Cursor</h3>
-                  <span className="text-sm text-[#ff6b35]">Code Editor</span>
+                  <span className="text-sm text-[#8B5CF6]">Code Editor</span>
                 </div>
                 <span className="text-sm text-[#a1a1a1]">Free / Pro $20/mo</span>
               </div>
@@ -112,7 +112,7 @@ export default function BlogPost() {
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h3 className="text-xl font-bold">3. Midjourney</h3>
-                  <span className="text-sm text-[#ff6b35]">Image Generation</span>
+                  <span className="text-sm text-[#8B5CF6]">Image Generation</span>
                 </div>
                 <span className="text-sm text-[#a1a1a1]">$10/mo</span>
               </div>
@@ -132,7 +132,7 @@ export default function BlogPost() {
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h3 className="text-xl font-bold">4. ChatGPT</h3>
-                  <span className="text-sm text-[#ff6b35]">All-Purpose Assistant</span>
+                  <span className="text-sm text-[#8B5CF6]">All-Purpose Assistant</span>
                 </div>
                 <span className="text-sm text-[#a1a1a1]">Free / Plus $20/mo</span>
               </div>
@@ -152,7 +152,7 @@ export default function BlogPost() {
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h3 className="text-xl font-bold">5. v0 (Vercel)</h3>
-                  <span className="text-sm text-[#ff6b35]">UI Generation</span>
+                  <span className="text-sm text-[#8B5CF6]">UI Generation</span>
                 </div>
                 <span className="text-sm text-[#a1a1a1]">Free / Pro $30/mo</span>
               </div>

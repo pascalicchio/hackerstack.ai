@@ -89,7 +89,7 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link href="/" className="text-2xl font-bold tracking-tight">
-                Hacker<span className="text-[#ff6b35]">Stack</span>.ai
+                Hacker<span className="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">Stack</span>.dev
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -109,7 +109,7 @@ export default function Home() {
             <div className="flex items-center space-x-4">
               <Link
                 href="/submit"
-                className="px-4 py-2 bg-[#ff6b35] text-[#0a0a0a] font-semibold rounded-lg hover:bg-[#ff8555] transition-colors"
+                className="px-4 py-2 bg-[#8B5CF6] text-[#0a0a0a] font-semibold rounded-lg hover:bg-[#A78BFA] transition-colors"
               >
                 Submit a Tool
               </Link>
@@ -122,13 +122,13 @@ export default function Home() {
       <section className="relative py-20 sm:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1a1a1a] via-[#0a0a0a] to-[#0a0a0a] opacity-50" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#ff6b35]/10 text-[#ff6b35] text-sm font-medium mb-6">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#8B5CF6]/10 text-[#8B5CF6] text-sm font-medium mb-6">
             <span className="mr-2">🚀</span>
             50+ Curated AI Tools for Indie Hackers
           </div>
           <h1 className="text-5xl sm:text-7xl font-bold tracking-tight mb-6">
             Build Faster with<br />
-            <span className="text-[#ff6b35]">AI Tools That Work</span>
+            <span className="text-[#8B5CF6]">AI Tools That Work</span>
           </h1>
           <p className="text-xl text-[#a1a1a1] max-w-2xl mx-auto mb-10">
             Curated directory of the best AI tools for indie hackers, solo founders, and bootstrappers. 
@@ -137,13 +137,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/tools"
-              className="px-8 py-4 bg-[#ff6b35] text-[#0a0a0a] font-bold text-lg rounded-lg hover:bg-[#ff8555] transition-all transform hover:scale-105"
+              className="px-8 py-4 bg-[#8B5CF6] text-[#0a0a0a] font-bold text-lg rounded-lg hover:bg-[#A78BFA] transition-all transform hover:scale-105"
             >
               Explore Tools
             </Link>
             <Link
               href="/blog"
-              className="px-8 py-4 border border-[#333] text-[#fafafa] font-semibold text-lg rounded-lg hover:border-[#ff6b35] hover:text-[#ff6b35] transition-colors"
+              className="px-8 py-4 border border-[#333] text-[#fafafa] font-semibold text-lg rounded-lg hover:border-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
             >
               Read the Blog
             </Link>
@@ -156,19 +156,19 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-[#ff6b35]">50+</div>
+              <div className="text-4xl font-bold text-[#8B5CF6]">50+</div>
               <div className="text-[#a1a1a1] mt-1">AI Tools</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-[#ff6b35]">6</div>
+              <div className="text-4xl font-bold text-[#8B5CF6]">6</div>
               <div className="text-[#a1a1a1] mt-1">Categories</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-[#ff6b35]">25+</div>
+              <div className="text-4xl font-bold text-[#8B5CF6]">25+</div>
               <div className="text-[#a1a1a1] mt-1">Reviews</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-[#ff6b35]">10K+</div>
+              <div className="text-4xl font-bold text-[#8B5CF6]">10K+</div>
               <div className="text-[#a1a1a1] mt-1">Monthly Readers</div>
             </div>
           </div>
@@ -187,10 +187,10 @@ export default function Home() {
               <Link
                 key={category.slug}
                 href={`/category/${category.slug}`}
-                className="p-6 bg-[#141414] border border-[#222] rounded-xl hover:border-[#ff6b35] transition-all group"
+                className="p-6 bg-[#141414] border border-[#222] rounded-xl hover:border-[#8B5CF6] transition-all group"
               >
                 <div className="text-4xl mb-3">{category.icon}</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-[#ff6b35] transition-colors">
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-[#8B5CF6] transition-colors">
                   {category.name}
                 </h3>
                 <p className="text-[#a1a1a1] text-sm">{category.count} tools</p>
@@ -210,7 +210,7 @@ export default function Home() {
             </div>
             <Link
               href="/tools"
-              className="text-[#ff6b35] hover:text-[#ff8555] font-semibold transition-colors"
+              className="text-[#8B5CF6] hover:text-[#A78BFA] font-semibold transition-colors"
             >
               View all →
             </Link>
@@ -219,7 +219,7 @@ export default function Home() {
             {featuredTools.map((tool, index) => (
               <div
                 key={index}
-                className="p-6 bg-[#0a0a0a] border border-[#222] rounded-xl hover:border-[#ff6b35] transition-all"
+                className="p-6 bg-[#0a0a0a] border border-[#222] rounded-xl hover:border-[#8B5CF6] transition-all"
               >
                 <div className="flex justify-between items-start mb-4">
                   <div>
@@ -229,7 +229,7 @@ export default function Home() {
                     </span>
                   </div>
                   {tool.affiliate && (
-                    <span className="text-xs px-2 py-1 bg-[#ff6b35]/20 text-[#ff6b35] rounded-full">
+                    <span className="text-xs px-2 py-1 bg-[#8B5CF6]/20 text-[#8B5CF6] rounded-full">
                       Affiliate
                     </span>
                   )}
@@ -262,7 +262,7 @@ export default function Home() {
             </div>
             <Link
               href="/blog"
-              className="text-[#ff6b35] hover:text-[#ff8555] font-semibold transition-colors"
+              className="text-[#8B5CF6] hover:text-[#A78BFA] font-semibold transition-colors"
             >
               View all →
             </Link>
@@ -272,15 +272,15 @@ export default function Home() {
               <Link
                 key={index}
                 href={`/blog/${post.slug}`}
-                className="p-6 bg-[#141414] border border-[#222] rounded-xl hover:border-[#ff6b35] transition-all group"
+                className="p-6 bg-[#141414] border border-[#222] rounded-xl hover:border-[#8B5CF6] transition-all group"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs px-2 py-1 bg-[#ff6b35]/20 text-[#ff6b35] rounded-full">
+                  <span className="text-xs px-2 py-1 bg-[#8B5CF6]/20 text-[#8B5CF6] rounded-full">
                     {post.category}
                   </span>
                   <span className="text-xs text-[#666]">{post.date}</span>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-[#ff6b35] transition-colors">
+                <h3 className="text-lg font-semibold mb-2 group-hover:text-[#8B5CF6] transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-[#a1a1a1] text-sm">{post.excerpt}</p>
@@ -303,11 +303,11 @@ export default function Home() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-[#0a0a0a] border border-[#333] rounded-lg text-[#fafafa] placeholder-[#666] focus:outline-none focus:border-[#ff6b35]"
+              className="flex-1 px-4 py-3 bg-[#0a0a0a] border border-[#333] rounded-lg text-[#fafafa] placeholder-[#666] focus:outline-none focus:border-[#8B5CF6]"
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-[#ff6b35] text-[#0a0a0a] font-bold rounded-lg hover:bg-[#ff8555] transition-colors"
+              className="px-6 py-3 bg-[#8B5CF6] text-[#0a0a0a] font-bold rounded-lg hover:bg-[#A78BFA] transition-colors"
             >
               Subscribe
             </button>
@@ -321,7 +321,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="text-xl font-bold mb-4">
-                Hacker<span className="text-[#ff6b35]">Stack</span>.ai
+                Hacker<span className="text-[#8B5CF6]">Stack</span>.ai
               </h3>
               <p className="text-[#a1a1a1] text-sm">
                 Curated AI tools for indie hackers, solo founders, and bootstrappers.

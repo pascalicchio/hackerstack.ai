@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Blog - HackerStack.ai',
+  title: 'Blog - HackerStack.dev',
   description: 'Reviews, guides, and stories about AI tools for indie hackers.',
 }
 
@@ -68,7 +68,7 @@ export default function Blog() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link href="/" className="text-2xl font-bold tracking-tight">
-                Hacker<span className="text-[#ff6b35]">Stack</span>.ai
+                Hacker<span className="text-[#8B5CF6]">Stack</span>.ai
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -88,7 +88,7 @@ export default function Blog() {
             <div className="flex items-center space-x-4">
               <Link
                 href="/submit"
-                className="px-4 py-2 bg-[#ff6b35] text-[#0a0a0a] font-semibold rounded-lg hover:bg-[#ff8555] transition-colors"
+                className="px-4 py-2 bg-[#8B5CF6] text-[#0a0a0a] font-semibold rounded-lg hover:bg-[#A78BFA] transition-colors"
               >
                 Submit a Tool
               </Link>
@@ -118,8 +118,8 @@ export default function Blog() {
                 key={category}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   index === 0
-                    ? 'bg-[#ff6b35] text-[#0a0a0a]'
-                    : 'bg-[#141414] text-[#a1a1a1] hover:text-[#fafafa] border border-[#222] hover:border-[#ff6b35]'
+                    ? 'bg-[#8B5CF6] text-[#0a0a0a]'
+                    : 'bg-[#141414] text-[#a1a1a1] hover:text-[#fafafa] border border-[#222] hover:border-[#8B5CF6]'
                 }`}
               >
                 {category}
@@ -137,15 +137,15 @@ export default function Blog() {
               <Link
                 key={index}
                 href={`/blog/${post.slug}`}
-                className="p-6 bg-[#141414] border border-[#222] rounded-xl hover:border-[#ff6b35] transition-all group flex flex-col"
+                className="p-6 bg-[#141414] border border-[#222] rounded-xl hover:border-[#8B5CF6] transition-all group flex flex-col"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs px-2 py-1 bg-[#ff6b35]/20 text-[#ff6b35] rounded-full">
+                  <span className="text-xs px-2 py-1 bg-[#8B5CF6]/20 text-[#8B5CF6] rounded-full">
                     {post.category}
                   </span>
                   <span className="text-xs text-[#666]">{post.readTime}</span>
                 </div>
-                <h2 className="text-xl font-semibold mb-2 group-hover:text-[#ff6b35] transition-colors">
+                <h2 className="text-xl font-semibold mb-2 group-hover:text-[#8B5CF6] transition-colors">
                   {post.title}
                 </h2>
                 <p className="text-[#a1a1a1] text-sm mb-4 flex-1">
@@ -153,7 +153,7 @@ export default function Blog() {
                 </p>
                 <div className="flex items-center justify-between pt-4 border-t border-[#222]">
                   <span className="text-xs text-[#666]">{post.date}</span>
-                  <span className="text-[#ff6b35] text-sm font-medium group-hover:underline">
+                  <span className="text-[#8B5CF6] text-sm font-medium group-hover:underline">
                     Read more →
                   </span>
                 </div>
@@ -176,11 +176,11 @@ export default function Blog() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-[#0a0a0a] border border-[#333] rounded-lg text-[#fafafa] placeholder-[#666] focus:outline-none focus:border-[#ff6b35]"
+              className="flex-1 px-4 py-3 bg-[#0a0a0a] border border-[#333] rounded-lg text-[#fafafa] placeholder-[#666] focus:outline-none focus:border-[#8B5CF6]"
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-[#ff6b35] text-[#0a0a0a] font-bold rounded-lg hover:bg-[#ff8555] transition-colors"
+              className="px-6 py-3 bg-[#8B5CF6] text-[#0a0a0a] font-bold rounded-lg hover:bg-[#A78BFA] transition-colors"
             >
               Subscribe
             </button>
@@ -191,7 +191,7 @@ export default function Blog() {
       {/* Footer */}
       <footer className="py-12 border-t border-[#222]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-[#666]">
-          © 2026 HackerStack.ai. All rights reserved.
+          © 2026 HackerStack.dev. All rights reserved.
         </div>
       </footer>
     </div>
