@@ -1,26 +1,28 @@
 #!/bin/bash
 # hackerstack-daily-routine.sh
 # Automated daily tasks for HackerStack (05:00 - 08:00 UTC)
+# Posts to Bluesky instead of Twitter (X API blocked)
 
-export X_API_KEY="HGqD0GcBHL78oLPKHIjFgwHGK"
-export X_API_SECRET="x76A9ZTvRmyUxK1iIubHSSlFM1raPyqmoGHAvtYu3IA1y2l5rE"
-export X_ACCESS_TOKEN="2016752032586022912-BDTvs84H74yYJ7qc87QBoiiiBQ9YOl"
-export X_ACCESS_SECRET="ZiGPpNfovG8jF4cz5HrnfouhzpNahZtj3PiupVKHN6yCQ"
-
+BLUESKY_SCRIPT="/root/.openclaw/workspace/bluesky-post.js"
 SCRIPT_DIR="/root/.openclaw/hackerstack"
-X_SCRIPT="/root/.openclaw/skills/x-api/scripts/x-post.mjs"
-
 LOG_FILE="$SCRIPT_DIR/cron/logs/daily-routine.log"
 
 log() {
     echo "[$(date -u '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"
 }
 
+# Post to Bluesky
+post_bluesky() {
+    local message="$1"
+    log "Posting to Bluesky: $message"
+    node "$BLUESKY_SCRIPT" "$message" >> "$LOG_FILE" 2>&1
+}
+
 # ============ 05:00 ============
 # Morning Blog Post
 post_blog_porning() {
     log "📝 Posting morning blog promotion..."
-    node "$X_SCRIPT" "☕ Good morning, indie hackers!
+    post_bluesky "☕ Good morning, indie hackers!
 
 New day, new tools to explore. Check out our latest guide:
 
@@ -34,7 +36,7 @@ New day, new tools to explore. Check out our latest guide:
 # Tool Feature
 feature_tool() {
     log "🔧 Featuring a tool..."
-    node "$X_SCRIPT" "Tool of the day: Cursor (AI code editor)
+    post_bluesky "Tool of the day: Cursor (AI code editor)
 
 It's not just an editor—it's your AI pair programmer.
 
@@ -52,7 +54,7 @@ Try it free: https://cursor.sh
 # Engagement Sprint
 engagement_sprint() {
     log "🤝 Running engagement sprint..."
-    # Like and reply to AI/indie hacker tweets
+    # Like and reply to AI/indie hacker posts on Bluesky
     cd /root/.openclaw && bash engagement-engine.sh
 }
 
@@ -60,7 +62,7 @@ engagement_sprint() {
 # Quick Tip
 post_tip() {
     log "💡 Posting quick tip..."
-    node "$X_SCRIPT" "💡 Quick tip: Use Claude for architecture decisions, Cursor for coding, ChatGPT for quick questions.
+    post_bluesky "💡 Quick tip: Use Claude for architecture decisions, Cursor for coding, ChatGPT for quick questions.
 
 Stack smart. 🚀
 
