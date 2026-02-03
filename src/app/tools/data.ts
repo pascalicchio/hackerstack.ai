@@ -580,15 +580,390 @@ Key capabilities:
     rating: 5,
     tags: ['analytics', 'product', 'funnels', 'experiments']
   },
+
+  // MORE CODE & DEVELOPMENT TOOLS (Tools 32-36)
+  {
+    id: 'lovable',
+    name: 'Lovable (v2)',
+    description: 'AI-powered full-stack development platform. Build, deploy, and scale applications with natural language.',
+    fullDescription: `Lovable.dev is an AI-powered full-stack development platform that lets you build, deploy, and scale applications using natural language.
+
+Key capabilities:
+- **Full-stack**: Frontend, backend, database
+- **Deploy instantly**: Automatic hosting and scaling
+- **Natural language**: Describe requirements in English
+- **Iterative development**: Refine through conversation`,
+    pricing: 'Free / Pro $29/mo',
+    category: 'Code & Development',
+    categorySlug: 'code-development',
+    affiliate: false,
+    url: 'https://lovable.dev',
+    rating: 5,
+    tags: ['full-stack', 'AI development', 'deployment', 'scaling']
+  },
+  {
+    id: 'supabase',
+    name: 'Supabase',
+    description: 'Open-source Firebase alternative. PostgreSQL database, auth, and real-time subscriptions.',
+    fullDescription: `Supabase is an open-source Firebase alternative providing PostgreSQL database, authentication, and real-time subscriptions.
+
+Key features:
+- **PostgreSQL**: Full SQL database with extensions
+- **Auth**: Built-in authentication and authorization
+- **Real-time**: Live subscriptions to database changes
+- **Edge Functions**: Serverless functions at the edge`,
+    pricing: 'Free / Pro $25/mo',
+    category: 'Code & Development',
+    categorySlug: 'code-development',
+    affiliate: false,
+    url: 'https://supabase.com',
+    rating: 5,
+    tags: ['database', 'backend', 'auth', 'postgres']
+  },
+  {
+    id: 'railway',
+    name: 'Railway',
+    description: 'Modern deployment platform. Deploy apps and databases in minutes with GitHub integration.',
+    fullDescription: `Railway is a modern deployment platform that lets you deploy applications and databases in minutes with seamless GitHub integration.
+
+Key features:
+- **Deploy from Git**: Connect repo, deploy automatically
+- **Databases**: PostgreSQL, MySQL, Redis, and more
+- **Custom domains**: Free SSL certificates
+- **Preview environments**: Automatic staging deployments`,
+    pricing: '$5/mo (First $20 free)',
+    category: 'Code & Development',
+    categorySlug: 'code-development',
+    affiliate: false,
+    url: 'https://railway.app',
+    rating: 4,
+    tags: ['deployment', 'infrastructure', 'devops', 'hosting']
+  },
+  {
+    id: 'windsurf',
+    name: 'Windsurf',
+    description: 'AI IDE from the makers of Codeium. Features AI flow state and intelligent code completion.',
+    fullDescription: `Windsurf is an AI-powered IDE from Codeium that features AI flow state and intelligent code completion for seamless development.
+
+Key capabilities:
+- **AI Flow**: Context-aware AI assistance
+- **Codeium integration**: Powerful AI model
+- **Modern IDE**: Built on modern architecture
+- **Collaboration**: Pair programming features`,
+    pricing: 'Free / Pro $15/mo',
+    category: 'Code & Development',
+    categorySlug: 'code-development',
+    affiliate: false,
+    url: 'https://windsurf.com',
+    rating: 4,
+    tags: ['IDE', 'AI coding', 'Codeium', 'development']
+  },
+  {
+    id: 'continue',
+    name: 'Continue',
+    description: 'Open-source AI coding assistant. Works with any LLM locally or in the cloud.',
+    fullDescription: `Continue is an open-source AI coding assistant that works with any LLM, either locally or in the cloud. Fully customizable and self-hostable.
+
+Key features:
+- **Open source**: Transparent and customizable
+- **Local models**: Run LLMs locally for privacy
+- **Multi-model**: Switch between providers easily
+- **VS Code & JetBrains**: Available as extensions`,
+    pricing: 'Free',
+    category: 'Code & Development',
+    categorySlug: 'code-development',
+    affiliate: false,
+    url: 'https://continue.dev',
+    rating: 4,
+    tags: ['open source', 'coding', 'local AI', 'VS Code']
+  },
+
+  // MORE DESIGN & CREATIVE TOOLS (Tools 37-40)
+  {
+    id: 'leonardo',
+    name: 'Leonardo',
+    description: 'AI image generation platform with real-time canvas and advanced controls. Great for game assets.',
+    fullDescription: `Leonardo is an AI image generation platform featuring real-time canvas, advanced controls, and is particularly great for game assets and creative designs.
+
+Key features:
+- **Real-time canvas**: Draw and generate simultaneously
+- **Game assets**: Built specifically for game developers
+- **Advanced controls**: Fine-tune every aspect
+- **Community feed**: Learn from other creations`,
+    pricing: 'Free tokens / Pro $10/mo',
+    category: 'Design & Creative',
+    categorySlug: 'design-creative',
+    affiliate: false,
+    url: 'https://leonardo.ai',
+    rating: 4,
+    tags: ['image generation', 'game assets', 'creative', 'AI art']
+  },
+  {
+    id: 'mubert',
+    name: 'Mubert',
+    description: 'AI-powered music generation. Create royalty-free tracks for videos, streams, and apps.',
+    fullDescription: `Mubert is an AI-powered music generation platform that creates royalty-free tracks for videos, streams, podcasts, and applications.
+
+Key capabilities:
+- **Text-to-music**: Describe the vibe, get a track
+- **Royalty-free**: Use commercially without worry
+- **API access**: Integrate into your apps
+- **Templates**: Quick generation by genre`,
+    pricing: 'Free / Pro $15/mo',
+    category: 'Design & Creative',
+    categorySlug: 'design-creative',
+    affiliate: false,
+    url: 'https://mubert.com',
+    rating: 4,
+    tags: ['music', 'audio', 'generation', 'royalty-free']
+  },
+  {
+    id: 'bing-image',
+    name: 'Bing Image Creator',
+    description: 'Free AI image generator powered by DALL-E 3. Create images directly from Bing.',
+    fullDescription: `Bing Image Creator is a free AI image generator powered by DALL-E 3, allowing you to create images directly from Bing or Edge browser.
+
+Key features:
+- **Free**: No cost for generations
+- **DALL-E 3**: High-quality image generation
+- **Bing integration**: Access from search or browser
+- **Easy to use**: Simple text-to-image interface`,
+    pricing: 'Free',
+    category: 'Design & Creative',
+    categorySlug: 'design-creative',
+    affiliate: false,
+    url: 'https://www.bing.com/images/create',
+    rating: 4,
+    tags: ['image generation', 'free', 'DALL-E', 'Bing']
+  },
+  {
+    id: 'photoroom',
+    name: 'PhotoRoom',
+    description: 'AI-powered photo editing studio. Remove backgrounds, retouch images, and create content.',
+    fullDescription: `PhotoRoom is an AI-powered photo editing studio that makes it easy to remove backgrounds, retouch images, and create professional content.
+
+Key capabilities:
+- **Background removal**: One-click extraction
+- **AI retouching**: Automatic enhancements
+- **Templates**: Professional layouts
+- **Mobile-first**: Great iOS and Android apps`,
+    pricing: 'Free / Pro $12/mo',
+    category: 'Design & Creative',
+    categorySlug: 'design-creative',
+    affiliate: false,
+    url: 'https://www.photoroom.com',
+    rating: 4,
+    tags: ['photo editing', 'background removal', 'mobile', 'marketing']
+  },
+
+  // MORE WRITING & CONTENT TOOLS (Tools 41-43)
+  {
+    id: 'contentbot',
+    name: 'ContentBot',
+    description: 'AI content writer for blogs, ads, and marketing copy. Features plagiarism checker.',
+    fullDescription: `ContentBot is an AI content writer specifically designed for blogs, advertisements, and marketing copy with built-in plagiarism checking.
+
+Key features:
+- **Blog generation**: Full articles from outlines
+- **Ad copy**: High-converting advertisements
+- **Plagiarism checker**: Ensure original content
+- **Multiple languages**: Content in 100+ languages`,
+    pricing: 'Free / Pro $19/mo',
+    category: 'Writing & Content',
+    categorySlug: 'writing-content',
+    affiliate: false,
+    url: 'https://contentbot.ai',
+    rating: 4,
+    tags: ['content', 'blog', 'marketing', 'plagiarism']
+  },
+  {
+    id: 'paragraphai',
+    name: 'ParagraphAI',
+    description: 'AI writing assistant that improves your writing. Grammar, clarity, and tone suggestions.',
+    fullDescription: `ParagraphAI is an AI writing assistant that improves your writing with grammar corrections, clarity suggestions, and tone adjustments.
+
+Key capabilities:
+- **Grammar checking**: Catch all errors
+- **Tone analysis**: Match your voice
+- **Paraphrasing**: Rewrite existing content
+- **Browser extension**: Works everywhere`,
+    pricing: 'Free / Pro $9/mo',
+    category: 'Writing & Content',
+    categorySlug: 'writing-content',
+    affiliate: false,
+    url: 'https://paragraphai.com',
+    rating: 4,
+    tags: ['writing assistant', 'grammar', 'clarity', 'tone']
+  },
+  {
+    id: 'sudowrite',
+    name: 'Sudowrite',
+    description: 'AI writing tool designed for creative writers. Great for novels, stories, and screenplays.',
+    fullDescription: `Sudowrite is an AI writing tool specifically designed for creative writers working on novels, stories, and screenplays.
+
+Key features:
+- **Creative writing**: Poetry, prose, and dialogue
+- **Story engine**: Generate plot ideas and twists
+- **Character development**: Flesh out personalities
+- **Rewrite suggestions**: Improve existing text`,
+    pricing: 'Free / Pro $10/mo',
+    category: 'Writing & Content',
+    categorySlug: 'writing-content',
+    affiliate: false,
+    url: 'https://sudowrite.com',
+    rating: 4,
+    tags: ['creative writing', 'novels', 'stories', 'screenplays']
+  },
+
+  // MORE MARKETING TOOLS (Tools 44-46)
+  {
+    id: 'growthbar',
+    name: 'GrowthBar',
+    description: 'SEO writing assistant with AI. Research keywords, analyze competitors, and write optimized content.',
+    fullDescription: `GrowthBar is an SEO writing assistant powered by AI that helps you research keywords, analyze competitors, and write perfectly optimized content.
+
+Key capabilities:
+- **Keyword research**: Find profitable keywords
+- **Competitor analysis**: See their strategy
+- **Content optimization**: Real-time SEO suggestions
+- **AI writing**: Generate optimized articles`,
+    pricing: 'Free / Pro $49/mo',
+    category: 'Marketing & Growth',
+    categorySlug: 'marketing-growth',
+    affiliate: false,
+    url: 'https://growthbarseo.com',
+    rating: 4,
+    tags: ['SEO', 'keywords', 'content', 'marketing']
+  },
+  {
+    id: 'letterdrop',
+    name: 'Letterdrop',
+    description: 'AI-powered content distribution. Get more traffic by automating your content promotion.',
+    fullDescription: `Letterdrop is an AI-powered content distribution platform that helps you get more traffic by automating your content promotion across channels.
+
+Key features:
+- **Automated distribution**: Schedule and post automatically
+- **Performance analytics**: Track every channel
+- **AI optimization**: Best times and formats
+- **Multi-platform**: Twitter, LinkedIn, and more`,
+    pricing: 'Free / Pro $29/mo',
+    category: 'Marketing & Growth',
+    categorySlug: 'marketing-growth',
+    affiliate: false,
+    url: 'https://letterdrop.com',
+    rating: 4,
+    tags: ['distribution', 'social media', 'automation', 'traffic']
+  },
+  {
+    id: 'taplio',
+    name: 'Taplio',
+    description: 'AI-powered LinkedIn growth tool. Schedule posts, find leads, and engage with your network.',
+    fullDescription: `Taplio is an AI-powered LinkedIn growth tool that helps you schedule posts, find leads, and engage with your professional network effectively.
+
+Key capabilities:
+- **Post scheduling**: Plan your LinkedIn content
+- **Lead generation**: Find and connect with prospects
+- **Engagement**: AI-suggested interactions
+- **Analytics**: Track your LinkedIn performance`,
+    pricing: '$49/mo',
+    category: 'Marketing & Growth',
+    categorySlug: 'marketing-growth',
+    affiliate: false,
+    url: 'https://taplio.com',
+    rating: 4,
+    tags: ['LinkedIn', 'social media', 'lead generation', 'networking']
+  },
+
+  // MORE PRODUCTIVITY TOOLS (Tools 47-48)
+  {
+    id: 'linear',
+    name: 'Linear',
+    description: 'Issue tracking and project management for modern software teams. Fast, keyboard-first.',
+    fullDescription: `Linear is an issue tracking and project management platform designed for modern software teams. It's fast, keyboard-first, and beautifully designed.
+
+Key features:
+- **Issue tracking**: Streamlined workflows
+- **Cycles**: Agile sprint management
+- **Automations**: Reduce manual work
+- **Keyboard-first**: Power user optimized`,
+    pricing: 'Free / Pro $10/mo',
+    category: 'Productivity',
+    categorySlug: 'productivity',
+    affiliate: false,
+    url: 'https://linear.app',
+    rating: 5,
+    tags: ['project management', 'issues', 'agile', 'software teams']
+  },
+  {
+    id: 'cal',
+    name: 'Cal.com',
+    description: 'Open-source scheduling platform. Replace Calendly with your own infrastructure.',
+    fullDescription: `Cal.com is an open-source scheduling platform that lets you replace Calendly with your own self-hosted or cloud infrastructure.
+
+Key features:
+- **Open source**: Full control and customization
+- **Integrations**: 80+ calendar and video apps
+- **Booking types**: One-off, round-robin, and more
+- **Self-hosting**: Run on your own infrastructure`,
+    pricing: 'Free / Pro $15/mo',
+    category: 'Productivity',
+    categorySlug: 'productivity',
+    affiliate: false,
+    url: 'https://cal.com',
+    rating: 5,
+    tags: ['scheduling', 'calendar', 'open source', 'meetings']
+  },
+
+  // DATA & ANALYTICS TOOL (Tool 49)
+  {
+    id: 'posthog',
+    name: 'PostHog',
+    description: 'Open-source product analytics. Track events, analyze funnels, and understand user behavior.',
+    fullDescription: `PostHog is an open-source product analytics platform that helps you track events, analyze funnels, and deeply understand user behavior.
+
+Key capabilities:
+- **Product analytics**: Events, funnels, and trends
+- **Session recording**: Watch user sessions
+- **Feature flags**: Controlled feature rollouts
+- **Self-hosting**: Full data ownership`,
+    pricing: 'Free / Cloud $49/mo',
+    category: 'Data & Analytics',
+    categorySlug: 'data-analytics',
+    affiliate: false,
+    url: 'https://posthog.com',
+    rating: 5,
+    tags: ['analytics', 'open source', 'product', 'user behavior']
+  },
+
+  // TOOL 50 - FINAL TOOL
+  {
+    id: 'claude-code',
+    name: 'Claude Code',
+    description: 'Anthropic\'s CLI tool for coding. Run Claude in your terminal for autonomous coding tasks.',
+    fullDescription: `Claude Code is Anthropic's CLI tool for coding that lets you run Claude directly in your terminal for autonomous coding tasks and pair programming.
+
+Key features:
+- **Terminal integration**: Work from command line
+- **Autonomous coding**: Give complex tasks to Claude
+- **Git integration**: Review changes automatically
+- **Multi-file editing**: Edit entire projects`,
+    pricing: 'Free (with Claude Pro)',
+    category: 'Code & Development',
+    categorySlug: 'code-development',
+    affiliate: false,
+    url: 'https://claude.com/claude-code',
+    rating: 5,
+    tags: ['CLI', 'coding', 'terminal', 'autonomous']
+  },
 ]
 
 export const categories = [
-  { name: 'Code & Development', count: 8, icon: '💻', slug: 'code-development' },
-  { name: 'Design & Creative', count: 8, icon: '🎨', slug: 'design-creative' },
-  { name: 'Writing & Content', count: 6, icon: '✍️', slug: 'writing-content' },
-  { name: 'Marketing & Growth', count: 4, icon: '📈', slug: 'marketing-growth' },
-  { name: 'Productivity', count: 3, icon: '⚡', slug: 'productivity' },
-  { name: 'Data & Analytics', count: 2, icon: '📊', slug: 'data-analytics' },
+  { name: 'Code & Development', count: 13, icon: '💻', slug: 'code-development' },
+  { name: 'Design & Creative', count: 12, icon: '🎨', slug: 'design-creative' },
+  { name: 'Writing & Content', count: 9, icon: '✍️', slug: 'writing-content' },
+  { name: 'Marketing & Growth', count: 7, icon: '📈', slug: 'marketing-growth' },
+  { name: 'Productivity', count: 5, icon: '⚡', slug: 'productivity' },
+  { name: 'Data & Analytics', count: 4, icon: '📊', slug: 'data-analytics' },
 ]
 
 export const totalTools = tools.length
