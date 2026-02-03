@@ -1,0 +1,27 @@
+# HackerStack Development Tasks Crontab
+# Scheduled execution over 3 hours
+# All times in UTC
+
+# ========================================
+# DEVELOPMENT TASKS (3-hour window)
+# ========================================
+
+# Task 1: Create submission form for tool suggestions
+# Execute: NOW or at scheduled time
+45 21 * * * /root/.openclaw/hackerstack/tasks/task1-submission-form.sh >> /root/.openclaw/hackerstack/cron/logs/tasks.log 2>&1
+
+# Task 2: Create Submit a Tool page + navigation link
+# Execute: 1 hour after Task 1
+45 22 * * * /root/.openclaw/hackerstack/tasks/task2-submit-page.sh >> /root/.openclaw/hackerstack/cron/logs/tasks.log 2>&1
+
+# Task 3: Apply for Google News indexing
+# Execute: 1 hour after Task 2
+45 23 * * * /root/.openclaw/hackerstack/tasks/task3-google-news.sh >> /root/.openclaw/hackerstack/cron/logs/tasks.log 2>&1
+
+# ========================================
+# EXECUTE ALL TASKS NOW (for immediate testing)
+# ========================================
+# To run immediately, execute:
+# bash /root/.openclaw/hackerstack/tasks/task1-submission-form.sh
+# bash /root/.openclaw/hackerstack/tasks/task2-submit-page.sh
+# bash /root/.openclaw/hackerstack/tasks/task3-google-news.sh

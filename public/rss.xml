@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>HackerStack - AI Tools for Indie Hackers</title>
+    <link>https://hackerstack.dev</link>
+    <description>Curated AI tools for indie hackers, solo founders, and bootstrappers. Honest reviews, guides, and tool recommendations.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Feb 2026 21:00:00 GMT</lastBuildDate>
+    <atom:link href="https://hackerstack.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Top 10 AI Tools for Indie Hackers in 2026</title>
+      <link>https://hackerstack.dev/blog/top-10-ai-tools-indie-hackers-2026</link>
+      <description>The best AI tools for indie hackers in 2026. Comprehensive reviews and comparisons.</description>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>https://hackerstack.dev/blog/top-10-ai-tools-indie-hackers-2026</guid>
+    </item>
+    
+    <item>
+      <title>Build a SaaS in 30 Days with AI</title>
+      <link>https://hackerstack.dev/blog/build-saas-30-days-ai</link>
+      <description>Step-by-step guide to building a SaaS in 30 days using AI tools.</description>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>https://hackerstack.dev/blog/build-saas-30-days-ai</guid>
+    </item>
+    
+    <item>
+      <title>Best Free AI Tools for Indie Hackers</title>
+      <link>https://hackerstack.dev/blog/best-free-ai-tools-indie-hackers</link>
+      <description>Free AI tools that actually work for indie hackers.</description>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>https://hackerstack.dev/blog/best-free-ai-tools-indie-hackers</guid>
+    </item>
+    
+    <item>
+      <title>Claude vs ChatGPT: Which AI Assistant is Best for Indie Hackers?</title>
+      <link>https://hackerstack.dev/blog/claude-vs-chatgpt-indie-hackers</link>
+      <description>Detailed comparison of Claude and ChatGPT for indie hacker workflows.</description>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>https://hackerstack.dev/blog/claude-vs-chatgpt-indie-hackers</guid>
+    </item>
+    
+    <item>
+      <title>Cursor Guide for Indie Hackers</title>
+      <link>https://hackerstack.dev/blog/cursor-guide-indie-hacking</link>
+      <description>Complete guide to using Cursor for indie hacking.</description>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>https://hackerstack.dev/blog/cursor-guide-indie-hacking</guid>
+    </item>
+  </channel>
+</rss>
