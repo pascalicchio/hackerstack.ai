@@ -1,72 +1,143 @@
-# HackerStack Smart Crontab
-# Day-of-week optimized posting schedule
-# User timezone: America/New_York (EST, UTC-5)
-# All times in UTC
+# HackerStack Comprehensive Crontab
+# Posts to BOTH Twitter + Bluesky
+# Engagement runs 20 minutes AFTER each post
+# All times in UTC (EST=UTC-5)
 
 # ========================================
-# POSTING SCHEDULE (by day of week)
+# MONDAY
+# 8AM(13:00), 10AM(15:00), 2PM(19:00), 3PM(20:00), 7PM(00:00)
 # ========================================
-# MONDAY: 13:00, 14:00 UTC (8-9 AM EST)
-# TUESDAY: 14:00, 15:00 UTC (9-10 AM EST)
-# WEDNESDAY: 14:00, 15:00, 16:00 UTC (9-11 AM EST)
-# THURSDAY: 15:00, 16:00 UTC (10-11 AM EST)
-# FRIDAY: 13:00, 14:00 UTC (8-9 AM EST)
-# SATURDAY: 14:00 UTC (9 AM EST)
-# SUNDAY: 13:00, 14:00 UTC (8-9 AM EST)
+0 13 * * 1 /root/.openclaw/hackerstack/comprehensive-routine.sh post "☕ Monday kickoff! What's your #1 goal this week? #IndieHacker #MondayMotivation"
+20 13 * * 1 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
 
-# Monday (1)
-0 13 * * 1 /root/.openclaw/hackerstack/smart-routine.sh post "☕ Monday kickoff! Time to build something great. What's on your roadmap this week? #IndieHacker #MondayMotivation" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-0 14 * * 1 /root/.openclaw/hackerstack/smart-routine.sh post "🚀 Monday momentum: What's the one thing you're shipping this week? #IndieHacker #BuildInPublic" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+0 15 * * 1 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🚀 Monday momentum: One small win today = big progress. What's yours? #IndieHacker #BuildInPublic"
+20 15 * * 1 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
 
-# Tuesday (2)
-0 14 * * 2 /root/.openclaw/hackerstack/smart-routine.sh post "📈 Tuesday is for shipping. What are you launching? #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-0 15 * * 2 /root/.openclaw/hackerstack/smart-routine.sh post "💼 High engagement window! Business and professional content peak. #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+0 19 * * 1 /root/.openclaw/hackerstack/comprehensive-routine.sh post "💼 Monday afternoon power hour! What are you shipping? #IndieHacker"
+20 19 * * 1 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
 
-# Wednesday (3) - Best overall day, longest window
-0 14 * * 3 /root/.openclaw/hackerstack/smart-routine.sh post "💡 Mid-week check-in. Stuck on a problem? What's blocking you? #IndieHacker #Productivity" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-0 15 * * 3 /root/.openclaw/hackerstack/smart-routine.sh post "🛠️ Wednesday = building day. Ship something today. #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-0 16 * * 3 /root/.openclaw/hackerstack/smart-routine.sh post "🎯 Keep pushing. Consistency beats intensity. #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+0 20 * * 1 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌅 Monday wrap: What did you accomplish? Own it! #IndieHacker #MondayVibes"
+20 20 * * 1 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
 
-# Thursday (4) - Great for tutorials
-0 15 * * 4 /root/.openclaw/hackerstack/smart-routine.sh post "📚 Thursday = Learn day. Drop a tool you discovered recently. I'll start: Cursor.sh #IndieHacker #Learning" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-0 16 * * 4 /root/.openclaw/hackerstack/smart-routine.sh post "🧵 Thursday is perfect for deep dives. What tutorial would help you most? #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-
-# Friday (5) - Wrap up the week
-0 13 * * 5 /root/.openclaw/hackerstack/smart-routine.sh post "🎯 Friday focus: What shipped this week? Own your wins! #IndieHacker #FridayFeeling" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-0 14 * * 5 /root/.openclaw/hackerstack/smart-routine.sh post "🌅 Friday wrap-up: One thing you're proud of this week? #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-
-# Saturday (6) - Lighthearted content
-0 14 * * 6 /root/.openclaw/hackerstack/smart-routine.sh post "🌿 Saturday: Work smarter, not harder. What are you exploring? #IndieHacker #WeekendVibes" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-
-# Sunday (7) - Prep for the week
-0 13 * * 0 /root/.openclaw/hackerstack/smart-routine.sh post "🔋 Sunday reset: Plan one commitment for next week. #IndieHacker #SundayPrep" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-0 14 * * 0 /root/.openclaw/hackerstack/smart-routine.sh post "📝 Sunday planning: What's your #1 goal for next week? #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+0 0 * * 2 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌙 Monday night thoughts: Plan tomorrow. Sleep. Repeat. #IndieHacker #LateNight"
+20 0 * * 2 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
 
 # ========================================
-# ENGAGEMENT ENGINE (every 4 hours)
+# TUESDAY
+# 9AM(14:00), 11AM(16:00), 5PM(22:00), 6PM(23:00), 8PM(01:00)
 # ========================================
-# Engagement throughout the day on both platforms
+0 14 * * 2 /root/.openclaw/hackerstack/comprehensive-routine.sh post "📈 Tuesday energy! What's the biggest challenge you're solving? #IndieHacker #TuesdayMotivation"
+20 14 * * 2 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
 
-0 */4 * * * cd /root/.openclaw && bash engagement-engine.sh >> /root/.openclaw/cron/logs/engagement.log 2>&1
+0 16 * * 2 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🔧 Tuesday tools: Drop a tool that changed your workflow. I'll start: Cursor.sh #IndieHacker #Productivity"
+20 16 * * 2 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
 
-# ========================================
-# GOOGLE ANALYTICS & SEARCH CONSOLE
-# ========================================
-# Daily reports at times that make sense
+0 22 * * 2 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌆 Tuesday evening: Reflect on wins. Small steps = big journeys. #IndieHacker #EveningVibes"
+20 22 * * 2 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
 
-0 8 * * * cd /root/.openclaw/hackerstack && ./gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/gsc-daily.log 2>&1
-0 20 * * * cd /root/.openclaw/hackerstack && ./gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/gsc-daily.log 2>&1
+0 23 * * 2 /root/.openclaw/hackerstack/comprehensive-routine.sh post "😴 Tuesday night: Rest up. Tomorrow is another build day. #IndieHacker"
+20 23 * * 2 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
 
-# ========================================
-# WEEKLY REPORT
-# ========================================
-# Sunday 20:00 UTC (3 PM EST) - End of week recap
-
-0 20 * * 0 cd /root/.openclaw/hackerstack && ./gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/weekly-report.log 2>&1
+0 1 * * 3 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌙 Late night building: Who's still up? Drop a 🔥 #IndieHacker #NightOwl"
+20 1 * * 3 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
 
 # ========================================
-# MONITORING
+# WEDNESDAY
+# 9AM(14:00), 12PM(17:00), 5PM(22:00), 7PM(00:00), 8:30PM(01:30)
 # ========================================
-# Hourly check that cron is running
+0 14 * * 3 /root/.openclaw/hackerstack/comprehensive-routine.sh post "💡 Wednesday wisdom: The best time to start is now. What are you building? #IndieHacker #WednesdayMotivation"
+20 14 * * 3 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
 
-0 * * * * ps aux | grep -q "[s]mart-routine" || echo "$(date): smart-routine may have failed" >> /root/.openclaw/hackerstack/cron/logs/monitor.log
+0 17 * * 3 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🍄 Wednesday afternoon: Mid-week check-in. Stuck? Ask away! #IndieHacker #Help"
+20 17 * * 3 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 22 * * 3 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌃 Wednesday night: Ship something today. Any progress = good progress. #IndieHacker #ShipIt"
+20 22 * * 3 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 0 * * 4 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌙 Hump day done! Celebrate the small wins. #IndieHacker #WednesdayNight"
+20 0 * * 4 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+30 1 * * 4 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌌 Late night dev session: Who's coding? Drop your stack! #IndieHacker #LateNightCoding"
+50 1 * * 4 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+# ========================================
+# THURSDAY
+# 10AM(15:00), 12PM(17:00), 2PM(19:00), 6PM(23:00), 7PM(00:01), 9PM(02:00)
+# ========================================
+0 15 * * 4 /root/.openclaw/hackerstack/comprehensive-routine.sh post "📚 Thursday learning: What's one thing you learned this week? #IndieHacker #ThursdayMotivation"
+20 15 * * 4 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 17 * * 4 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🛠️ Thursday tools deep-dive: Best AI tool you've discovered? #IndieHacker #Tools"
+20 17 * * 4 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 19 * * 4 /root/.openclaw/hackerstack/comprehensive-routine.sh post "⚡ Thursday afternoon power! One more push before Friday. #IndieHacker #Productivity"
+20 19 * * 4 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 23 * * 4 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌙 Thursday night: Reflect, plan, rest. What a week! #IndieHacker"
+20 23 * * 4 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+1 0 * * 5 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🛌 Late Thursday: One more day until the weekend. Hang in there! #IndieHacker #AlmostFriday"
+21 0 * * 5 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 2 * * 5 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌅 2AM built sessions: Who's still awake? Building in the quiet. #IndieHacker #NightOwl"
+20 2 * * 5 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+# ========================================
+# FRIDAY
+# 8:30AM(13:30), 11AM(16:00), 1PM(18:00), 2PM(19:00), 7PM(00:00)
+# ========================================
+30 13 * * 5 /root/.openclaw/hackerstack/comprehensive-routine.sh post "☕ Friday morning: What's the plan? One week closer to your goals! #IndieHacker #FridayMotivation"
+50 13 * * 5 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 16 * * 5 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🚀 Friday mid-day: Ship something before the weekend! What are you finishing? #IndieHacker #ShipItFriday"
+20 16 * * 5 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 18 * * 5 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🍕 Friday afternoon: Almost there! One last push? #IndieHacker"
+20 18 * * 5 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 19 * * 5 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌅 Friday wrap-up: What shipped this week? Big or small, celebrate! #IndieHacker #FridayFeeling"
+20 19 * * 5 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 0 * * 6 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌙 Friday night: You earned it. Rest up for the weekend. #IndieHacker #FridayNight"
+20 0 * * 6 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+# ========================================
+# SATURDAY
+# 9AM(14:00), 11AM(16:00), 7PM(00:00), 9PM(02:00), 10PM(03:00)
+# ========================================
+0 14 * * 6 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌿 Saturday vibes: Work smart, enjoy the weekend! What are you exploring? #IndieHacker #SaturdayVibes"
+20 14 * * 6 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 16 * * 6 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🛠️ Saturday building: Who's working on a side project? Drop what you're building! #IndieHacker #SideProject"
+20 16 * * 6 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 0 * * 7 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌙 Saturday night: Reflect on the week. What went well? #IndieHacker #WeekendReflection"
+20 0 * * 7 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 2 * * 7 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌌 2AM thoughts: Building something cool? Share! #IndieHacker #LateNight"
+20 2 * * 7 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 3 * * 7 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌅 3AM builder check-in: The most productive hours. Who's with me? #IndieHacker #EarlyMorning"
+20 3 * * 7 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+# ========================================
+# SUNDAY
+# 8AM(13:00), 10AM(15:00), 6PM(23:00), 9PM(02:00)
+# ========================================
+0 13 * * 0 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🔋 Sunday reset: One commitment for next week. What is it? #IndieHacker #SundayPrep"
+20 13 * * 0 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 15 * * 0 /root/.openclaw/hackerstack/comprehensive-routine.sh post "📝 Sunday planning: Map out next week. Goals = achieved! #IndieHacker #SundayPlanning"
+20 15 * * 0 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 23 * * 0 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌙 Sunday night: Prep your mind. Monday is coming. You've got this! #IndieHacker #SundayNight"
+20 23 * * 0 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+0 2 * * 1 /root/.openclaw/hackerstack/comprehensive-routine.sh post "🌅 2AM Sunday/Monday boundary: Early birds, late night owls - same mission! #IndieHacker #Grind"
+20 2 * * 1 /root/.openclaw/hackerstack/comprehensive-routine.sh engage
+
+# ========================================
+# ANALYTICS (twice daily)
+# ========================================
+0 8 * * * /root/.openclaw/hackerstack/gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/gsc-daily.log 2>&1
+0 20 * * * /root/.openclaw/hackerstack/gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/gsc-daily.log 2>&1
