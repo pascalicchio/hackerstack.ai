@@ -1,3 +1,7 @@
 {
-  "projects": {}
+  "hackerstack.dev": {
+    "name": "HackerStack",
+    "domain": "hackerstack.dev",
+    "sitemapUrl": "https://hackerstack.dev/sitemap.xml"
+  }
 }
