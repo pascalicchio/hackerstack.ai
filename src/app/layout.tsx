@@ -48,7 +48,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         {/* Google Analytics */}
-        <GoogleAnalytics GA_MEASUREMENT_ID="G-XXXXXXXXXX" />
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-B5E74SGTP9" />
       </head>
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-[#0a0a0a] text-[#fafafa]`}>
         {children}

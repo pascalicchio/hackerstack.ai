@@ -2,6 +2,9 @@
   "hackerstack.dev": {
     "name": "HackerStack",
     "domain": "hackerstack.dev",
-    "sitemapUrl": "https://hackerstack.dev/sitemap.xml"
+    "sitemapUrl": "https://hackerstack.dev/sitemap.xml",
+    "ga4AccountId": "383092396",
+    "ga4PropertyId": "13405000969",
+    "ga4MeasurementId": "G-B5E74SGTP9"
   }
 }
