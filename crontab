@@ -1,0 +1,47 @@
+# HackerStack Daily Crontab
+# All automated tasks for HackerStack.dev
+
+# ========================================
+# BLOG POSTING SCHEDULE (UTC)
+# ========================================
+# 05:00 UTC - Morning blog promotion
+# 06:00 UTC - Tool feature post
+# 07:00 UTC - Engagement sprint
+# 07:30 UTC - Quick tip
+# 07:45 UTC - Prep daily report
+
+0 5 * * * /root/.openclaw/hackerstack/hackerstack-daily-routine.sh 05:00 >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+0 6 * * * /root/.openclaw/hackerstack/hackerstack-daily-routine.sh 06:00 >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+0 7 * * * /root/.openclaw/hackerstack/hackerstack-daily-routine.sh 07:00 >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+30 7 * * * /root/.openclaw/hackerstack/hackerstack-daily-routine.sh 07:30 >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+45 7 * * * /root/.openclaw/hackerstack/hackerstack-daily-routine.sh 07:45 >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+
+# ========================================
+# GOOGLE ANALYTICS & SEARCH CONSOLE
+# ========================================
+# 08:00 UTC - Daily analytics report
+# 20:00 UTC - Evening analytics check
+
+0 8 * * * cd /root/.openclaw/hackerstack && ./gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/gsc-daily.log 2>&1
+0 20 * * * cd /root/.openclaw/hackerstack && ./gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/gsc-daily.log 2>&1
+
+# ========================================
+# ENGAGEMENT ENGINE (Twitter/Bluesky)
+# ========================================
+# Every 4 hours - Engagement checks
+
+0 */4 * * * cd /root/.openclaw && bash engagement-engine.sh >> /root/.openclaw/cron/logs/engagement.log 2>&1
+
+# ========================================
+# WEEKLY TASKS
+# ========================================
+# Sunday 08:00 UTC - Full analytics report
+
+0 8 * * 0 cd /root/.openclaw/hackerstack && ./gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/weekly-report.log 2>&1
+
+# ========================================
+# MONITORING
+# ========================================
+# Every hour - Check if posting is working
+
+0 * * * * ps aux | grep -q "[h]ackerstack-daily-routine" || echo "$(date): Daily routine may have failed" >> /root/.openclaw/hackerstack/cron/logs/monitor.log
