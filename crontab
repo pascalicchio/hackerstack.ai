@@ -1,47 +1,72 @@
-# HackerStack Daily Crontab
-# All automated tasks for HackerStack.dev
+# HackerStack Smart Crontab
+# Day-of-week optimized posting schedule
+# User timezone: America/New_York (EST, UTC-5)
+# All times in UTC
 
 # ========================================
-# BLOG POSTING SCHEDULE (UTC)
+# POSTING SCHEDULE (by day of week)
 # ========================================
-# 05:00 UTC - Morning blog promotion
-# 06:00 UTC - Tool feature post
-# 07:00 UTC - Engagement sprint
-# 07:30 UTC - Quick tip
-# 07:45 UTC - Prep daily report
+# MONDAY: 13:00, 14:00 UTC (8-9 AM EST)
+# TUESDAY: 14:00, 15:00 UTC (9-10 AM EST)
+# WEDNESDAY: 14:00, 15:00, 16:00 UTC (9-11 AM EST)
+# THURSDAY: 15:00, 16:00 UTC (10-11 AM EST)
+# FRIDAY: 13:00, 14:00 UTC (8-9 AM EST)
+# SATURDAY: 14:00 UTC (9 AM EST)
+# SUNDAY: 13:00, 14:00 UTC (8-9 AM EST)
 
-0 5 * * * /root/.openclaw/hackerstack/hackerstack-daily-routine.sh 05:00 >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-0 6 * * * /root/.openclaw/hackerstack/hackerstack-daily-routine.sh 06:00 >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-0 7 * * * /root/.openclaw/hackerstack/hackerstack-daily-routine.sh 07:00 >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-30 7 * * * /root/.openclaw/hackerstack/hackerstack-daily-routine.sh 07:30 >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
-45 7 * * * /root/.openclaw/hackerstack/hackerstack-daily-routine.sh 07:45 >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+# Monday (1)
+0 13 * * 1 /root/.openclaw/hackerstack/smart-routine.sh post "☕ Monday kickoff! Time to build something great. What's on your roadmap this week? #IndieHacker #MondayMotivation" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+0 14 * * 1 /root/.openclaw/hackerstack/smart-routine.sh post "🚀 Monday momentum: What's the one thing you're shipping this week? #IndieHacker #BuildInPublic" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+
+# Tuesday (2)
+0 14 * * 2 /root/.openclaw/hackerstack/smart-routine.sh post "📈 Tuesday is for shipping. What are you launching? #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+0 15 * * 2 /root/.openclaw/hackerstack/smart-routine.sh post "💼 High engagement window! Business and professional content peak. #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+
+# Wednesday (3) - Best overall day, longest window
+0 14 * * 3 /root/.openclaw/hackerstack/smart-routine.sh post "💡 Mid-week check-in. Stuck on a problem? What's blocking you? #IndieHacker #Productivity" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+0 15 * * 3 /root/.openclaw/hackerstack/smart-routine.sh post "🛠️ Wednesday = building day. Ship something today. #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+0 16 * * 3 /root/.openclaw/hackerstack/smart-routine.sh post "🎯 Keep pushing. Consistency beats intensity. #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+
+# Thursday (4) - Great for tutorials
+0 15 * * 4 /root/.openclaw/hackerstack/smart-routine.sh post "📚 Thursday = Learn day. Drop a tool you discovered recently. I'll start: Cursor.sh #IndieHacker #Learning" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+0 16 * * 4 /root/.openclaw/hackerstack/smart-routine.sh post "🧵 Thursday is perfect for deep dives. What tutorial would help you most? #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+
+# Friday (5) - Wrap up the week
+0 13 * * 5 /root/.openclaw/hackerstack/smart-routine.sh post "🎯 Friday focus: What shipped this week? Own your wins! #IndieHacker #FridayFeeling" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+0 14 * * 5 /root/.openclaw/hackerstack/smart-routine.sh post "🌅 Friday wrap-up: One thing you're proud of this week? #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+
+# Saturday (6) - Lighthearted content
+0 14 * * 6 /root/.openclaw/hackerstack/smart-routine.sh post "🌿 Saturday: Work smarter, not harder. What are you exploring? #IndieHacker #WeekendVibes" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+
+# Sunday (7) - Prep for the week
+0 13 * * 0 /root/.openclaw/hackerstack/smart-routine.sh post "🔋 Sunday reset: Plan one commitment for next week. #IndieHacker #SundayPrep" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+0 14 * * 0 /root/.openclaw/hackerstack/smart-routine.sh post "📝 Sunday planning: What's your #1 goal for next week? #IndieHacker" >> /root/.openclaw/hackerstack/cron/logs/cron.log 2>&1
+
+# ========================================
+# ENGAGEMENT ENGINE (every 4 hours)
+# ========================================
+# Engagement throughout the day on both platforms
+
+0 */4 * * * cd /root/.openclaw && bash engagement-engine.sh >> /root/.openclaw/cron/logs/engagement.log 2>&1
 
 # ========================================
 # GOOGLE ANALYTICS & SEARCH CONSOLE
 # ========================================
-# 08:00 UTC - Daily analytics report
-# 20:00 UTC - Evening analytics check
+# Daily reports at times that make sense
 
 0 8 * * * cd /root/.openclaw/hackerstack && ./gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/gsc-daily.log 2>&1
 0 20 * * * cd /root/.openclaw/hackerstack && ./gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/gsc-daily.log 2>&1
 
 # ========================================
-# ENGAGEMENT ENGINE (Twitter/Bluesky)
+# WEEKLY REPORT
 # ========================================
-# Every 4 hours - Engagement checks
+# Sunday 20:00 UTC (3 PM EST) - End of week recap
 
-0 */4 * * * cd /root/.openclaw && bash engagement-engine.sh >> /root/.openclaw/cron/logs/engagement.log 2>&1
-
-# ========================================
-# WEEKLY TASKS
-# ========================================
-# Sunday 08:00 UTC - Full analytics report
-
-0 8 * * 0 cd /root/.openclaw/hackerstack && ./gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/weekly-report.log 2>&1
+0 20 * * 0 cd /root/.openclaw/hackerstack && ./gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/weekly-report.log 2>&1
 
 # ========================================
 # MONITORING
 # ========================================
-# Every hour - Check if posting is working
+# Hourly check that cron is running
 
-0 * * * * ps aux | grep -q "[h]ackerstack-daily-routine" || echo "$(date): Daily routine may have failed" >> /root/.openclaw/hackerstack/cron/logs/monitor.log
+0 * * * * ps aux | grep -q "[s]mart-routine" || echo "$(date): smart-routine may have failed" >> /root/.openclaw/hackerstack/cron/logs/monitor.log
