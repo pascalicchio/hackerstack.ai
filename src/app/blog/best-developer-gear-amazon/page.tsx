@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { generateBlogPostSchema } from '../../lib/schema'
+import { generateBlogPostSchema } from '../../../lib/schema'
 
 export const metadata: Metadata = {
   title: 'Best Developer Gear on Amazon for Indie Hackers | HackerStack.dev',
