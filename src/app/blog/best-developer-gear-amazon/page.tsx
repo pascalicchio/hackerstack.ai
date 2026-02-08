@@ -12,53 +12,83 @@ export default function BestDeveloperGearAmazon() {
     {
       category: '💻 Laptops & Monitors',
       items: [
-        { name: 'MacBook Pro 14" M3', why: 'Best laptop for developers, excellent battery life, M3 chip crushes compilation times', price: '$1,999+' },
-        { name: 'MacBook Pro 16" M3', why: 'Bigger screen for coding, still portable enough to carry', price: '$2,499+' },
-        { name: 'Dell XPS 15', why: 'Best Windows alternative, OLED display option, developer-friendly', price: '$1,499+' },
-        { name: 'LG UltraFine 4K', why: 'USB-C hub built-in, Apple-certified, perfect for Mac setups', price: '$699+' },
-        { name: 'Samsung Odyssey G9', why: '49" ultrawide curved, zero bezels, incredible for multi-monitor setups', price: '$1,099+' },
+        { 
+          name: 'MacBook Pro 14" M3', 
+          why: 'Best laptop for developers, excellent battery life, M3 chip crushes compilation times', 
+          price: '$1,999+',
+          affiliate: 'https://amzn.to/4ag7CYf'
+        },
+        { name: 'MacBook Pro 16" M3', why: 'Bigger screen for coding, still portable enough to carry', price: '$2,499+', affiliate: 'https://amzn.to/4ag7CYf' },
+        { name: 'Dell XPS 15', why: 'Best Windows alternative, OLED display option, developer-friendly', price: '$1,499+', affiliate: null },
+        { name: 'LG UltraFine 4K', why: 'USB-C hub built-in, Apple-certified, perfect for Mac setups', price: '$699+', affiliate: null },
+        { name: 'Samsung Odyssey G9', why: '49" ultrawide curved, zero bezels, incredible for multi-monitor setups', price: '$1,099+', affiliate: null },
       ]
     },
     {
       category: '⌨️ Keyboards & Mice',
       items: [
-        { name: 'Keychron Q1 Pro', why: 'Mechanical, wireless, fully customizable, hot-swappable switches', price: '$199' },
-        { name: 'Logitech MX Master 3S', why: 'Ergonomic, multi-device pairing, incredible scroll wheel', price: '$99' },
-        { name: 'Apple Magic Keyboard', why: 'Sleek, minimal, fingerprint-resistant, seamless Mac integration', price: '$99' },
+        { 
+          name: 'Keychron Q1 Pro', 
+          why: 'Mechanical, wireless, fully customizable, hot-swappable switches', 
+          price: '$199',
+          affiliate: 'https://amzn.to/45UuwmQ'
+        },
+        { name: 'Logitech MX Master 3S', why: 'Ergonomic, multi-device pairing, incredible scroll wheel', price: '$99', affiliate: null },
+        { name: 'Apple Magic Keyboard', why: 'Sleek, minimal, fingerprint-resistant, seamless Mac integration', price: '$99', affiliate: null },
       ]
     },
     {
       category: '🎤 Microphones & Webcams',
       items: [
-        { name: 'Shure MV7', why: 'USB/XLR combo, podcast-quality, excellent for coding streams', price: '$349' },
-        { name: 'Blue Yeti X', why: 'Studio quality USB mic, multiple polar patterns', price: '$170' },
-        { name: 'Logitech Brio 4K', why: 'Professional webcam, HDR, Windows Hello support', price: '$199' },
-        { name: 'Sony ZV-1', why: 'YouTube camera, excellent low light, flip-out screen', price: '$748' },
+        { 
+          name: 'Shure MV7', 
+          why: 'USB/XLR combo, podcast-quality, excellent for coding streams', 
+          price: '$349',
+          affiliate: 'https://amzn.to/3Md3JLS'
+        },
+        { name: 'Blue Yeti X', why: 'Studio quality USB mic, multiple polar patterns', price: '$170', affiliate: null },
+        { name: 'Logitech Brio 4K', why: 'Professional webcam, HDR, Windows Hello support', price: '$199', affiliate: null },
+        { name: 'Sony ZV-1', why: 'YouTube camera, excellent low light, flip-out screen', price: '$748', affiliate: null },
       ]
     },
     {
       category: '☕ Coffee & Productivity',
       items: [
-        { name: 'Fellow Stagg EKG', why: 'Electric pour-over kettle, precise temperature control', price: '$65' },
-        { name: 'AeroPress', why: 'Portable, makes amazing coffee, virtually unbreakable', price: '$38' },
-        { name: 'Timemore Chestnut C3', why: 'Hand grinder, consistent grind quality, portable', price: '$75' },
+        { 
+          name: 'Fellow Stagg EKG', 
+          why: 'Electric pour-over kettle, precise temperature control', 
+          price: '$65',
+          affiliate: 'https://amzn.to/4tncK5N'
+        },
+        { name: 'AeroPress', why: 'Portable, makes amazing coffee, virtually unbreakable', price: '$38', affiliate: null },
+        { name: 'Timemore Chestnut C3', why: 'Hand grinder, consistent grind quality, portable', price: '$75', affiliate: null },
       ]
     },
     {
       category: '🪑 Ergonomics',
       items: [
-        { name: 'Herman Miller Aeron', why: 'Legendary comfort, adjustable everything, 12-year warranty', price: '$1,395+' },
-        { name: 'Secretlab Titan', why: 'Gaming chair but great for devs, magnetic memory foam', price: '$499+' },
-        { name: 'Fully Jarvis', why: 'Electric standing desk, memory presets, excellent stability', price: '$699+' },
-        { name: 'Ergotron LX Dual Monitor Arm', why: 'Free up desk space, smooth adjustments, clamp mount', price: '$359' },
-        { name: 'Rain Design mStand', why: 'Aluminum laptop stand, passive cooling, sleek design', price: '$49' },
+        { 
+          name: 'Herman Miller Aeron', 
+          why: 'Legendary comfort, adjustable everything, 12-year warranty', 
+          price: '$1,395+',
+          affiliate: 'https://amzn.to/3ZnQtXS'
+        },
+        { name: 'Secretlab Titan', why: 'Gaming chair but great for devs, magnetic memory foam', price: '$499+', affiliate: null },
+        { name: 'Fully Jarvis', why: 'Electric standing desk, memory presets, excellent stability', price: '$699+', affiliate: null },
+        { name: 'Ergotron LX Dual Monitor Arm', why: 'Free up desk space, smooth adjustments, clamp mount', price: '$359', affiliate: null },
+        { name: 'Rain Design mStand', why: 'Aluminum laptop stand, passive cooling, sleek design', price: '$49', affiliate: null },
       ]
     },
     {
       category: '👓 Blue Light Glasses',
       items: [
-        { name: 'Gunnar Optiks', why: 'Original tech glasses, reduce eye strain during long sessions', price: '$95+' },
-        { name: 'Felix Gray', why: 'Stylish modern design, multiple frame options', price: '$89+' },
+        { 
+          name: 'Gunnar Optiks', 
+          why: 'Original tech glasses, reduce eye strain during long sessions', 
+          price: '$95+',
+          affiliate: 'https://amzn.to/4toZMnW'
+        },
+        { name: 'Felix Gray', why: 'Stylish modern design, multiple frame options', price: '$89+', affiliate: null },
       ]
     }
   ]
@@ -116,14 +146,25 @@ export default function BestDeveloperGearAmazon() {
                     </div>
                     <div className="text-right">
                       <span className="text-[#8B5CF6] font-semibold">{item.price}</span>
-                      <a 
-                        href={`https://www.amazon.com/s?k=${encodeURIComponent(item.name)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block mt-2 text-sm text-[#666] hover:text-[#8B5CF6]"
-                      >
-                        Search on Amazon →
-                      </a>
+                      {item.affiliate ? (
+                        <a 
+                          href={item.affiliate}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block mt-2 px-3 py-1 bg-[#8B5CF6]/20 text-[#8B5CF6] text-sm rounded hover:bg-[#8B5CF6]/30 transition-colors"
+                        >
+                          View on Amazon →
+                        </a>
+                      ) : (
+                        <a 
+                          href={`https://www.amazon.com/s?k=${encodeURIComponent(item.name)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block mt-2 text-sm text-[#666] hover:text-[#8B5CF6]"
+                        >
+                          Search on Amazon →
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

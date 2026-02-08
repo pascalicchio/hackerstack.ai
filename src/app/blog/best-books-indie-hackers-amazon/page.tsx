@@ -16,7 +16,8 @@ export default function BestBooksIndieHackersAmazon() {
           name: 'The Pragmatic Programmer', 
           authors: 'Andrew Hunt & David Thomas',
           why: 'The classic that shaped generations of developers. Practical advice on coding, debugging, and professional habits that stand the test of time.',
-          level: 'All levels'
+          level: 'All levels',
+          affiliate: 'https://amzn.to/4tmOnVB'
         },
         { 
           name: 'Clean Code', 
@@ -207,14 +208,25 @@ export default function BestBooksIndieHackersAmazon() {
                       </span>
                     </div>
                     <p className="text-[#a1a1a1]">{book.why}</p>
-                    <a 
-                      href={`https://www.amazon.com/s?k=${encodeURIComponent(book.name + ' ' + book.authors)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block mt-2 text-sm text-[#8B5CF6] hover:text-[#A78BFA]"
-                    >
-                      Find on Amazon →
-                    </a>
+                    {book.affiliate ? (
+                      <a 
+                        href={book.affiliate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-2 px-3 py-1 bg-[#8B5CF6]/20 text-[#8B5CF6] text-sm rounded hover:bg-[#8B5CF6]/30 transition-colors"
+                      >
+                        Buy on Amazon →
+                      </a>
+                    ) : (
+                      <a 
+                        href={`https://www.amazon.com/s?k=${encodeURIComponent(book.name + ' ' + book.authors)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-2 text-sm text-[#8B5CF6] hover:text-[#A78BFA]"
+                      >
+                        Find on Amazon →
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
