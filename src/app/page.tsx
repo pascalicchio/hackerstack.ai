@@ -57,12 +57,9 @@ export default function Home() {
               <Link href="/blog" className="text-[#a1a1a1] hover:text-[#fafafa] transition-colors">
                 Blog
               </Link>
-              <Link href="/categories" className="text-[#a1a1a1] hover:text-[#fafafa] transition-colors">
-                Categories
-              </Link>
-              <Link href="/about" className="text-[#a1a1a1] hover:text-[#fafafa] transition-colors">
+              <a href="#about" className="text-[#a1a1a1] hover:text-[#fafafa] transition-colors">
                 About
-              </Link>
+              </a>
             </div>
             <div className="flex items-center space-x-4">
               <Link
@@ -126,7 +123,7 @@ export default function Home() {
               <div className="text-[#a1a1a1] mt-1">Reviews</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-[#8B5CF6]">2</div>
+              <div className="text-4xl font-bold text-[#8B5CF6]">10</div>
               <div className="text-[#a1a1a1] mt-1">Blog Posts</div>
             </div>
           </div>
@@ -144,7 +141,7 @@ export default function Home() {
             {categories.map((category) => (
               <Link
                 key={category.slug}
-                href={`/category/${category.slug}`}
+                href={`/tools#${category.slug}`}
                 className="p-6 bg-[#141414] border border-[#222] rounded-xl hover:border-[#8B5CF6] transition-all group"
               >
                 <div className="text-4xl mb-3">{category.icon}</div>
@@ -244,8 +241,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Newsletter Section */}
+      {/* About Section */}
       <section className="py-20 bg-[#141414]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+            About HackerStack.dev
+          </h2>
+          <p className="text-[#a1a1a1] text-lg max-w-2xl mx-auto mb-8">
+            HackerStack.dev is a curated directory of the best AI tools for indie hackers, 
+            solo founders, and bootstrappers. We test, review, and recommend tools that 
+            actually help you ship faster and grow your business.
+          </p>
+          <p className="text-[#a1a1a1] text-lg mb-8">
+            Built by indie hackers, for indie hackers. 
+            <br />
+            <a href="mailto:hello@hackerstack.dev" className="text-[#8B5CF6] hover:text-[#A78BFA]">
+              hello@hackerstack.dev
+            </a>
+          </p>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Stay Updated with AI Tools
@@ -284,19 +302,19 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Tools</h4>
               <ul className="space-y-2 text-sm text-[#a1a1a1]">
-                <li><Link href="/category/code-development" className="hover:text-[#fafafa]">Code & Development</Link></li>
-                <li><Link href="/category/design-creative" className="hover:text-[#fafafa]">Design & Creative</Link></li>
-                <li><Link href="/category/writing-content" className="hover:text-[#fafafa]">Writing & Content</Link></li>
-                <li><Link href="/category/marketing-growth" className="hover:text-[#fafafa]">Marketing & Growth</Link></li>
+                <li><Link href="/tools#code-development" className="hover:text-[#fafafa]">Code & Development</Link></li>
+                <li><Link href="/tools#design-creative" className="hover:text-[#fafafa]">Design & Creative</Link></li>
+                <li><Link href="/tools#writing-content" className="hover:text-[#fafafa]">Writing & Content</Link></li>
+                <li><Link href="/tools#marketing-growth" className="hover:text-[#fafafa]">Marketing & Growth</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Resources</h4>
               <ul className="space-y-2 text-sm text-[#a1a1a1]">
                 <li><Link href="/blog" className="hover:text-[#fafafa]">Blog</Link></li>
-                <li><Link href="/about" className="hover:text-[#fafafa]">About</Link></li>
-                <li><Link href="/contact" className="hover:text-[#fafafa]">Contact</Link></li>
-                <li><Link href="/privacy" className="hover:text-[#fafafa]">Privacy Policy</Link></li>
+                <li><a href="#about" className="hover:text-[#fafafa]">About</a></li>
+                <li><a href="mailto:hello@hackerstack.dev" className="hover:text-[#fafafa]">Contact</a></li>
+                <li><a href="mailto:hello@hackerstack.dev" className="hover:text-[#fafafa]">Privacy Policy</a></li>
               </ul>
             </div>
             <div>
