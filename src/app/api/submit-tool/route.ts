@@ -97,7 +97,7 @@ transporter.sendMail(mailOptions, (error, info) => {
 
     return NextResponse.json({
       success: true,
-      message: 'Tool submitted successfully! We\\'ll review it soon.'
+      message: "Tool submitted successfully! We'll review it soon."
     })
 
   } catch (error: any) {
