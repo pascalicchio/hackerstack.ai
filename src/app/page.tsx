@@ -70,7 +70,6 @@ export default function Home() {
               </a>
             </div>
             <div className="flex items-center space-x-4">
-              <SearchBox />
               <Link
                 href="/submit"
                 className="px-4 py-2 bg-[#8B5CF6] text-[#0a0a0a] font-semibold rounded-lg hover:bg-[#A78BFA] transition-colors"
@@ -94,10 +93,16 @@ export default function Home() {
             Build Faster with<br />
             <span className="text-[#8B5CF6]">AI Tools That Work</span>
           </h1>
-          <p className="text-xl text-[#a1a1a1] max-w-2xl mx-auto mb-10">
+          <p className="text-xl text-[#a1a1a1] max-w-2xl mx-auto mb-6">
             Curated directory of the best AI tools for indie hackers, solo founders, and bootstrappers. 
             Honest reviews, comparisons, and guides to help you ship faster.
           </p>
+          
+          {/* Search Box in Hero */}
+          <div className="max-w-lg mx-auto mb-10">
+            <SearchBox />
+          </div>
+          
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/tools"
