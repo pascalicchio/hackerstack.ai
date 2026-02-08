@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import SearchBox from '../../components/SearchBox'
 
 export const metadata: Metadata = {
   title: 'Blog - HackerStack.dev',
@@ -102,6 +103,7 @@ export default function Blog() {
               </Link>
             </div>
             <div className="flex items-center space-x-4">
+              <SearchBox />
               <Link
                 href="/submit"
                 className="px-4 py-2 bg-[#8B5CF6] text-[#0a0a0a] font-semibold rounded-lg hover:bg-[#A78BFA] transition-colors"

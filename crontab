@@ -149,3 +149,8 @@
 
 # Daily report at 10 AM EST (15:00 UTC)
 0 15 * * * /root/.openclaw/hackerstack/daily-research-report.sh --send >> /root/.openclaw/hackerstack/cron/logs/daily-research.log 2>&1
+
+# ========================================
+# HOURLY ENGAGEMENT BOT (EVERY HOUR)
+# ========================================
+0 * * * * /root/.openclaw/hackerstack/hourly-engagement.sh >> /root/.openclaw/hackerstack/cron/logs/hourly-engagement.log 2>&1
