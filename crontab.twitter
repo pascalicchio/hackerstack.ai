@@ -1,0 +1,14 @@
+# HackerStack Twitter/X Automation Crontab
+# Posts: 5:00, 6:00, 7:00, 7:30 AM UTC
+
+# Tool Feature Post - 5:00 AM UTC
+0 5 * * * /root/.openclaw/hackerstack/x-post "🚀 Tool Feature: [Tool Name] - [Description] → hackerstack.dev/tools #indiehacker #AI" >> /root/.openclaw/hackerstack/data/twitter.log 2>&1
+
+# Productivity Tip - 6:00 AM UTC
+0 6 * * * /root/.openclaw/hackerstack/x-post "💡 Productivity tip: [Your tip] #indiehacker #productivity" >> /root/.openclaw/hackerstack/data/twitter.log 2>&1
+
+# Blog Post Share - 7:00 AM UTC
+0 7 * * * /root/.openclaw/hackerstack/x-post "📝 New post: [Blog Title] → hackerstack.dev/blog/[slug] #indiehacker" >> /root/.openclaw/hackerstack/data/twitter.log 2>&1
+
+# Quick Hack - 7:30 AM UTC
+30 7 * * * /root/.openclaw/hackerstack/x-post "⚡ Quick hack: [Your hack] #indiehacker #coding" >> /root/.openclaw/hackerstack/data/twitter.log 2>&1

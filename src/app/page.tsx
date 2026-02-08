@@ -15,6 +15,20 @@ export const metadata: Metadata = {
 
 const recentPosts = [
   {
+    title: 'Best Developer Gear on Amazon for Indie Hackers',
+    excerpt: 'Curated list of the best gear to level up your development setup.',
+    date: '2026-02-08',
+    category: 'Amazon Favorites',
+    slug: 'best-developer-gear-amazon',
+  },
+  {
+    title: 'Best Books for Indie Hackers on Amazon',
+    excerpt: 'Essential reading list for developers, founders, and indie hackers.',
+    date: '2026-02-08',
+    category: 'Amazon Favorites',
+    slug: 'best-books-indie-hackers-amazon',
+  },
+  {
     title: 'Claude vs ChatGPT: Which AI Assistant is Best for Indie Hackers?',
     excerpt: 'A comprehensive comparison of the two leading AI assistants for building software businesses.',
     date: '2026-02-02',
@@ -23,17 +37,10 @@ const recentPosts = [
   },
   {
     title: 'How to Use AI to Build a SaaS in 30 Days',
-    excerpt: 'Step-by-step guide to leveraging AI tools to launch your SaaS faster than ever before.',
+    excerpt: 'Step-by-step guide to leveraging AI tools to launch your SaaS faster.',
     date: '2026-01-28',
     category: 'Guides',
     slug: 'build-saas-30-days-ai',
-  },
-  {
-    title: 'Top 10 AI Tools for Indie Hackers in 2026',
-    excerpt: 'Our curated list of the best AI tools that actually move the needle for solo founders.',
-    date: '2026-01-25',
-    category: 'Tool Reviews',
-    slug: 'top-10-ai-tools-indie-hackers-2026',
   },
 ]
 

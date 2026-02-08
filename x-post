@@ -1,0 +1,7 @@
+#!/bin/bash
+# HackerStack X Posting - Easy Command
+# Usage: ./x-post "Your tweet here"
+
+source /root/.openclaw/.x-env
+cd /root/.openclaw/skills/x-api/scripts
+node x-post.mjs "$1"

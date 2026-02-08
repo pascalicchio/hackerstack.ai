@@ -141,3 +141,11 @@
 # ========================================
 0 8 * * * /root/.openclaw/hackerstack/gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/gsc-daily.log 2>&1
 0 20 * * * /root/.openclaw/hackerstack/gsc-auto.sh daily >> /root/.openclaw/hackerstack/cron/logs/gsc-daily.log 2>&1
+
+# ========================================
+# PRODUCT RESEARCH (every hour, 10 AM report)
+# ========================================
+0 * * * * /root/.openclaw/hackerstack/research-products.sh >> /root/.openclaw/hackerstack/cron/logs/research.log 2>&1
+
+# Daily report at 10 AM EST (15:00 UTC)
+0 15 * * * /root/.openclaw/hackerstack/daily-research-report.sh --send >> /root/.openclaw/hackerstack/cron/logs/daily-research.log 2>&1

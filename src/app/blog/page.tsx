@@ -8,6 +8,22 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    title: 'Best Developer Gear on Amazon for Indie Hackers',
+    excerpt: 'Curated list of the best gear to level up your development setup. From ergonomic chairs to mechanical keyboards, these tools help you code longer and better.',
+    date: '2026-02-08',
+    category: 'Amazon Favorites',
+    slug: 'best-developer-gear-amazon',
+    readTime: '8 min read',
+  },
+  {
+    title: 'Best Books for Indie Hackers on Amazon',
+    excerpt: 'Essential reading list for developers, founders, and indie hackers. From coding best practices to entrepreneurship, these books will level up your skills.',
+    date: '2026-02-08',
+    category: 'Amazon Favorites',
+    slug: 'best-books-indie-hackers-amazon',
+    readTime: '10 min read',
+  },
+  {
     title: 'Claude vs ChatGPT: Which AI Assistant is Best for Indie Hackers?',
     excerpt: 'A comprehensive comparison of the two leading AI assistants for building software businesses. We test coding, writing, analysis, and pricing to help you choose.',
     date: '2026-02-02',
@@ -57,7 +73,7 @@ const posts = [
   },
 ]
 
-const categories = ['All', 'Tool Reviews', 'Comparisons', 'Guides', 'Strategy']
+const categories = ['All', 'Amazon Favorites', 'Tool Reviews', 'Comparisons', 'Guides', 'Strategy']
 
 export default function Blog() {
   return (
@@ -172,10 +188,12 @@ export default function Blog() {
           <p className="text-[#a1a1a1] text-lg max-w-2xl mx-auto mb-8">
             Get the latest AI tools, guides, and indie hacker insights delivered weekly.
           </p>
-          <form className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
+          <form action="/api/newsletter" method="POST" className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
             <input
               type="email"
+              name="email"
               placeholder="Enter your email"
+              required
               className="flex-1 px-4 py-3 bg-[#0a0a0a] border border-[#333] rounded-lg text-[#fafafa] placeholder-[#666] focus:outline-none focus:border-[#8B5CF6]"
             />
             <button
@@ -190,8 +208,47 @@ export default function Blog() {
 
       {/* Footer */}
       <footer className="py-12 border-t border-[#222]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-[#666]">
-          © 2026 HackerStack.dev. All rights reserved.
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">
+                Hacker<span className="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">Stack</span>.dev
+              </h3>
+              <p className="text-[#a1a1a1] text-sm">
+                Curated AI tools for indie hackers, solo founders, and bootstrappers.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Tools</h4>
+              <ul className="space-y-2 text-sm text-[#a1a1a1]">
+                <li><Link href="/tools#code-development" className="hover:text-[#fafafa]">Code & Development</Link></li>
+                <li><Link href="/tools#design-creative" className="hover:text-[#fafafa]">Design & Creative</Link></li>
+                <li><Link href="/tools#writing-content" className="hover:text-[#fafafa]">Writing & Content</Link></li>
+                <li><Link href="/tools#marketing-growth" className="hover:text-[#fafafa]">Marketing & Growth</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Resources</h4>
+              <ul className="space-y-2 text-sm text-[#a1a1a1]">
+                <li><Link href="/blog" className="hover:text-[#fafafa]">Blog</Link></li>
+                <li><a href="#about" className="hover:text-[#fafafa]">About</a></li>
+                <li><a href="mailto:hello@hackerstack.dev" className="hover:text-[#fafafa]">Contact</a></li>
+                <li><Link href="/blog/privacy" className="hover:text-[#fafafa]">Privacy Policy</Link></li>
+                <li><Link href="/blog/terms" className="hover:text-[#fafafa]">Terms of Service</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Connect</h4>
+              <ul className="space-y-2 text-sm text-[#a1a1a1]">
+                <li><a href="https://twitter.com/HackerStackAI" target="_blank" rel="noopener noreferrer" className="hover:text-[#fafafa]">Twitter</a></li>
+                <li><a href="https://bsky.app/profile/hackerstackai.bsky.social" target="_blank" rel="noopener noreferrer" className="hover:text-[#fafafa]">Bluesky</a></li>
+                <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#fafafa]">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="pt-8 border-t border-[#222] text-center text-sm text-[#666]">
+            © 2026 HackerStack.dev. All rights reserved.
+          </div>
         </div>
       </footer>
     </div>
