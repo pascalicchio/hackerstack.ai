@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { spawn } from 'child_process'
+import nodemailer from 'nodemailer'
 
 export async function POST(request: NextRequest) {
   try {
@@ -31,68 +31,20 @@ Submitted from: hackerstack.dev/submit
 Date: ${new Date().toISOString()}
     `.trim()
 
-    // Send email using Node.js nodemailer (more reliable than shell)
-    const emailScript = `
-const nodemailer = require('nodemailer');
+    // Send email using nodemailer directly
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.SUBMISSION_EMAIL_USER || 'WakingUpInMatrix@gmail.com',
+        pass: process.env.SUBMISSION_EMAIL_PASS || 'hyf_xkg6wug4YJF8hnr'
+      }
+    })
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'WakingUpInMatrix@gmail.com',
-    pass: 'hyf_xkg6wug4YJF8hnr'
-  }
-});
-
-const mailOptions = {
-  from: 'HackerStack <WakingUpInMatrix@gmail.com>',
-  to: 'WakingUpInMatrix@gmail.com',
-  subject: '🔔 New Tool Submission: ${toolName}',
-  text: \`${emailBody.replace(/`/g, '\\`')}\`
-};
-
-transporter.sendMail(mailOptions, (error, info) => {
-  if (error) {
-    console.error('Email error:', error);
-    process.exit(1);
-  }
-  console.log('Email sent:', info.response);
-  process.exit(0);
-});
-`
-
-    // Execute the email script
-    await new Promise((resolve, reject) => {
-      const child = spawn('node', ['-e', emailScript], {
-        cwd: '/root/.openclaw/hackerstack',
-        stdio: ['pipe', 'pipe', 'pipe']
-      })
-
-      let stdout = ''
-      let stderr = ''
-
-      child.stdout.on('data', (data) => {
-        stdout += data.toString()
-        console.log(data.toString().trim())
-      })
-
-      child.stderr.on('data', (data) => {
-        stderr += data.toString()
-        console.error(data.toString().trim())
-      })
-
-      child.on('close', (code) => {
-        if (code === 0) {
-          resolve(stdout)
-        } else {
-          reject(new Error(`Email failed with code ${code}: ${stderr}`))
-        }
-      })
-
-      // Kill after 10 seconds
-      setTimeout(() => {
-        child.kill()
-        reject(new Error('Email timeout'))
-      }, 10000)
+    await transporter.sendMail({
+      from: 'HackerStack <WakingUpInMatrix@gmail.com>',
+      to: 'WakingUpInMatrix@gmail.com',
+      subject: `🔔 New Tool Submission: ${toolName}`,
+      text: emailBody
     })
 
     return NextResponse.json({
